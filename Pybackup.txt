@@ -1,0 +1,14 @@
+import os
+import time
+
+source = ["F:/virustotal/"]
+target_dir = ["F:/backip/"]
+target = "F:/backip/" + time.strftime("%Y%m%d") + ".zip"
+print(str(target))
+print(target_dir)
+zip_cm = "zip -qr {0} {1}".format(target," ".join(source))
+print(str(zip_cm))
+if os.system(zip_cm) == 0:
+    print("Good backup to: ", target)
+else:
+    print("Failed")
