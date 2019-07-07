@@ -1,0 +1,15 @@
+import os
+import time
+
+source = ["F:\\virustotal\\"]
+target_dir = ["F:\\backip\\"]
+target = "F:/backip/" + time.strftime("%Y%m%d")
+win_target = "F:\\backip\\" +  time.strftime("%Y%m%d")
+print(str(target))
+print(target_dir)
+zip_cm = "powershell.exe Compress-Archive -Path {1} -DestinationPath {0}".format(win_target," ".join(source))
+print(str(zip_cm))
+if os.system(zip_cm) == 0:
+    print("Good backup to: ", target)
+else:
+    print("Failed")
