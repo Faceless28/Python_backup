@@ -1,6 +1,10 @@
 import os
 import time
 
+
+# PowerShell: Compress-Archive -Path F:\virustotal\ -DestinationPath F:\backip\backup\filename
+# Linux zip: zip -qr
+
 source = ["F:/virustotal/"]
 target_dir = ["F:/backip/"]
 target = "F:/backip/" + time.strftime("%Y%m%d") + ".zip"
